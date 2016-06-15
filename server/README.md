@@ -1,4 +1,4 @@
-## SWoRD - Simple Weapon of Raspberry Destruction - Server
+## SWoRD
 
 ### Configuration
 - **Platform:** node

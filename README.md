@@ -1,4 +1,4 @@
-## SWoRD - Simple Weapon of Raspberry Destruction
+## SWoRD
 
 Wiki is actively used.
 
