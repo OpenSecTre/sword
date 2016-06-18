@@ -10,6 +10,8 @@ RUN 			npm install
 COPY 			./server /usr/src/app
 
 EXPOSE 			3000
+
+#				NOTE: update to later docker-compose + docker version to support docker-compose build arguments
 ENV				MONGODB=mongodb://sword-mongo-database:27017/sword
 
 RUN				ls /usr/src/app
