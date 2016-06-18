@@ -1,0 +1,5 @@
+FROM 			nginx:1.11.1
+
+MAINTAINER 		Mika Turunen <mika.turunen@ymail.com>
+
+COPY			./client/dist/* /usr/share/nginx/html/
