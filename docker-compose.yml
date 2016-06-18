@@ -6,14 +6,12 @@
 
 
 sword-mongo-database:
-    build: .
     image: mongo:3.3.8
-    ports:
-        - 27017:27017
-
 
 sword-server:
     build: .
     dockerfile: Dockerfile.node
     ports:
         - 3000:3000
+    links:
+        - sword-mongo-database
