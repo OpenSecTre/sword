@@ -10,7 +10,7 @@ RUN 			npm install
 COPY 			./server /usr/src/app
 
 EXPOSE 			3000
-ENV				MONGODB=mongodb://mongo:27017/sword
+ENV				MONGODB=mongodb://sword-mongo-database:27017/sword
 
 RUN				ls /usr/src/app
 CMD 			[ "npm", "start" ]
