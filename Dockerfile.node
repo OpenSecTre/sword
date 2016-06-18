@@ -5,10 +5,11 @@ MAINTAINER 		Mika Turunen <mika.turunen@ymail.com>
 RUN 			mkdir -p /usr/src/app
 WORKDIR 		/usr/src/app
 
-ONBUILD COPY 	../server/package.json /usr/src/app/package.json
-ONBUILD RUN 	npm install
-ONBUILD COPY 	../server /usr/src/app
+COPY 			./server/package.json /usr/src/app/package.json
+RUN 			npm install
+COPY 			./server /usr/src/app
 
 EXPOSE 			3000
 
+RUN				ls /usr/src/app
 CMD 			[ "npm", "start" ]

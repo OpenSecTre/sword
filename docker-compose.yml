@@ -1,6 +1,9 @@
 # Compose is used to create the complete package locally to test and develop the application.
 # Could also be used to do a full deployment of the application into a cloud platform if needed.
 
+# NOTE the Dockerfile need to be in the root as they cannot go "up" from their build context and we need to navigate
+#      into the server, client and few other directories for them so they need to be there.
+
 sword-server:
     build: .
     dockerfile: Dockerfile.node
