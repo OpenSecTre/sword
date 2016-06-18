@@ -1,6 +1,8 @@
-# Compose is used to create the complete package locally to test and develop the application
+# Compose is used to create the complete package locally to test and develop the application.
+# Could also be used to do a full deployment of the application into a cloud platform if needed.
 
-node:
-    build:
-        context: .
-        dockerfile: Dockerfile.node
+sword-server:
+    build: .
+    dockerfile: Dockerfile.node
+    ports:
+        - 3000:3000
