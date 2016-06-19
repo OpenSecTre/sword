@@ -1,11 +1,9 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-export class HomeView extends React.Component {
+export class HomeView extends Component {
   render () {
     return (
-      <div className='container text-center'>
-        <h1>SWoRD</h1>
-      </div>
+      <div></div>
     )
   }
 }
