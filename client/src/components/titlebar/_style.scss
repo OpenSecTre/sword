@@ -1,8 +1,8 @@
 @import '02-tools/variables';
 
-$appbar-background-color: $color3;
-$appbar-text-color: $color2;
-$appbar-text-highlight-color: $color2;
+$appbar-background-color: $color4;
+$appbar-text-color: $color3;
+$appbar-text-highlight-color: $color3;
 
 .appbar {
   background-color: $appbar-background-color;
@@ -11,7 +11,7 @@ $appbar-text-highlight-color: $color2;
 
 .title {
   color: $appbar-text-color;
-  margin: .5em;
+  margin: .8em;
 }
 
 .highlight {
