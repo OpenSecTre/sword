@@ -1,10 +1,11 @@
-import React, { Component } from 'react'
-import Menu from 'material-ui/Menu'
-import MenuItem from 'material-ui/MenuItem'
+import React, { Component } from 'react';
+import Menu from 'material-ui/Menu';
+import MenuItem from 'material-ui/MenuItem';
+import Divider from 'material-ui/Divider';
 import classes from './_style.scss';
 
-import IconSettings from 'material-ui/svg-icons/action/settings'
-import IconScan from 'material-ui/svg-icons/action/perm-scan-wifi'
+import IconSettings from 'material-ui/svg-icons/action/settings';
+import IconScan from 'material-ui/svg-icons/action/perm-scan-wifi';
 
 export class AppMenu extends Component {
   render () {
@@ -12,11 +13,12 @@ export class AppMenu extends Component {
       <div className={classes.menu}>
         <Menu autoWidth={false}>
           <MenuItem primaryText='Newtwork Scanning' leftIcon={<IconScan />} />
-          <MenuItem primaryText='Settings' disabled={true} leftIcon={<IconSettings />} />
+          <Divider />
+          <MenuItem primaryText='Settings' disabled leftIcon={<IconSettings />} />
         </Menu>
       </div>
-    )
+    );
   }
 }
 
-export default AppMenu
+export default AppMenu;

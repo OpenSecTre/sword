@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
+import React, { Component } from 'react';
+import {Toolbar, ToolbarGroup, ToolbarTitle} from 'material-ui/Toolbar';
 
 export class StatusBar extends Component {
   render () {
@@ -9,8 +9,8 @@ export class StatusBar extends Component {
           <ToolbarTitle text='Status' />
         </ToolbarGroup>
       </Toolbar>
-    )
+    );
   }
 }
 
-export default StatusBar
+export default StatusBar;

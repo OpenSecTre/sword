@@ -1,2 +1,2 @@
-import TitleBar from './TitleBar'
-export default TitleBar
+import TitleBar from './TitleBar';
+export default TitleBar;

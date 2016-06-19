@@ -1,2 +1,2 @@
-import StyleguideView from './StyleguideView'
-export default StyleguideView
+import StyleguideView from './StyleguideView';
+export default StyleguideView;
