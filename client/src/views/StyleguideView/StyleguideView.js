@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import classes from './_styles.scss'
+import React, { Component } from 'react';
+import classes from './_styles.scss';
 
 export class StyleguideView extends Component {
   render () {
@@ -71,8 +71,8 @@ export class StyleguideView extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default StyleguideView
+export default StyleguideView;

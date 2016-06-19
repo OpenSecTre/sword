@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import AppBar from 'material-ui/AppBar'
+import React, { Component } from 'react';
 import classes from './_style.scss';
 
 export class TitleBar extends Component {
@@ -10,8 +9,8 @@ export class TitleBar extends Component {
           SW<span className={classes.highlight}>o</span>RD
         </h1>
       </div>
-    )
+    );
   }
 }
 
-export default TitleBar
+export default TitleBar;

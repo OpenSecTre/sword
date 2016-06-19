@@ -1,8 +1,8 @@
-import React, { PropTypes } from 'react'
-import '../../styles/core.scss'
-import TitleBar from 'components/titlebar'
-import AppMenu from 'components/appmenu'
-import StatusBar from 'components/statusbar'
+import React, { PropTypes } from 'react';
+import '../../styles/core.scss';
+import TitleBar from 'components/titlebar';
+import AppMenu from 'components/appmenu';
+import StatusBar from 'components/statusbar';
 
 // Note: Stateless/function components *will not* hot reload!
 // react-transform *only* works on component classes.
@@ -25,11 +25,11 @@ function CoreLayout ({ children }) {
       </div>
       <StatusBar />
     </div>
-  )
+  );
 }
 
 CoreLayout.propTypes = {
   children: PropTypes.element
-}
+};
 
-export default CoreLayout
+export default CoreLayout;
