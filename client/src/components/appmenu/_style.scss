@@ -4,4 +4,6 @@ $menu-background-color: $color4;
 
 .menu {
   background-color: $menu-background-color;
+  min-width: $menu-width;
+  max-width: $menu-width;
 }
