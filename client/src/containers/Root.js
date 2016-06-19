@@ -9,9 +9,9 @@ console.log(darkBaseTheme);
 
 const muiTheme = getMuiTheme(Object.assign({}, darkBaseTheme, {
   palette: {
-    accent1Color: '#333533',
-    accent2Color: '#333533',
-    accent3Color: '#333533',
+    accent1Color: '#242423',
+    accent2Color: '#242423',
+    accent3Color: '#242423',
     primary1Color: '#ad2f32',
     primary2Color: '#ad2f32',
     primary3Color: '#cfdbd5',
