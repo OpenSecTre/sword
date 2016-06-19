@@ -11,7 +11,7 @@ export class AppMenu extends Component {
   render () {
     return (
       <div className={classes.menu}>
-        <Menu autoWidth={false}>
+        <Menu autoWidth={false} width={'280px'}>
           <MenuItem primaryText='Newtwork Scanning' leftIcon={<IconScan />} />
           <Divider />
           <MenuItem primaryText='Settings' disabled leftIcon={<IconSettings />} />
