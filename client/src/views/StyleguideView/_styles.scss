@@ -1,0 +1,26 @@
+@import '02-tools/variables';
+
+.block {
+  background-color: $color4;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 1.3em;
+  font-weight: 500;
+
+  &::after {
+    display: block;
+    content: '';
+    border-bottom: 1px solid $color2;
+  }
+}
+
+.example {
+
+}
+
+.code {
+
+}
