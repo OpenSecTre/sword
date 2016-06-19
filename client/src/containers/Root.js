@@ -5,8 +5,6 @@ import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-console.log(darkBaseTheme);
-
 const muiTheme = getMuiTheme(Object.assign({}, darkBaseTheme, {
   palette: {
     accent1Color: '#242423',
