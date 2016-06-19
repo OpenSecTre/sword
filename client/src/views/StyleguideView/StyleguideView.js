@@ -15,13 +15,6 @@ export class StyleguideView extends Component {
             <h3>SWoRD Heading 3</h3>
             <h4>SWoRD Heading 4</h4>
           </div>
-
-          <pre className={classes.code}>
-            &lt;h1&gt;SWoRD Heading 1&lt;/h1&gt;<br />
-            &lt;h2&gt;SWoRD Heading 2&lt;/h2&gt;<br />
-            &lt;h3&gt;SWoRD Heading 3&lt;/h3&gt;<br />
-            &lt;h4&gt;SWoRD Heading 4&lt;/h4&gt;<br />
-          </pre>
         </div>
 
         {/* PARAGRAPHS */}
@@ -40,15 +33,41 @@ export class StyleguideView extends Component {
               Sword basic text example with nothing special.
             </p>
           </div>
+        </div>
 
-          <pre className={classes.code}>
-          &lt;p&gt;<br />
-            Sword basic text example with nothing special...<br />
-          &lt;/p&gt;<br />
-          &lt;p&gt;<br />
-            Sword basic text example with nothing special...<br />
-          &lt;/p&gt;<br />
-          </pre>
+        {/* Lists */}
+        <div className={classes.block}>
+          <h1 className={classes.title}>Lists</h1>
+
+          <h2 className={classes.subtitle}>Unordered list</h2>
+          <div className={classes.example}>
+            <ul>
+              <li>List Example 1</li>
+              <li>List Example 2</li>
+              <li>List Example 3</li>
+              <li>List Example 4</li>
+            </ul>
+          </div>
+
+          <h2 className={classes.subtitle}>Ordered list</h2>
+          <div className={classes.example}>
+            <ol>
+              <li>List Example 1</li>
+              <li>List Example 2</li>
+              <li>List Example 3</li>
+              <li>List Example 4</li>
+            </ol>
+          </div>
+
+          <h2 className={classes.subtitle}>Unstyled list</h2>
+          <div className={classes.example}>
+            <ul className='list--unstyled'>
+              <li>List Example 1</li>
+              <li>List Example 2</li>
+              <li>List Example 3</li>
+              <li>List Example 4</li>
+            </ul>
+          </div>
         </div>
       </div>
     )
