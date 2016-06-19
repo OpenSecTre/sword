@@ -1,0 +1,34 @@
+$app-background-color: $color5;
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: $app-background-color;
+}
+
+.flx-app-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.flx-app-main {
+  padding: .5em;
+}
+
+.flx-container {
+  display: flex;
+
+  &.flx-row {
+    flex-direction: row;
+  }
+
+  &.flx-column {
+    flex-direction: column;
+  }
+}
+
+.flx-1 {
+  flex: 1;
+}

@@ -5,7 +5,19 @@ import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-const muiTheme = getMuiTheme();
+console.log(darkBaseTheme);
+
+const muiTheme = getMuiTheme(Object.assign({}, darkBaseTheme, {
+  palette: {
+    accent1Color: '#333533',
+    accent2Color: '#333533',
+    accent3Color: '#333533',
+    primary1Color: '#ad2f32',
+    primary2Color: '#ad2f32',
+    primary3Color: '#cfdbd5',
+    textColor: '#e8eddf'
+  }
+}));
 
 export default class Root extends React.Component {
   static propTypes = {

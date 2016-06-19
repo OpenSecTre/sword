@@ -15,17 +15,15 @@ import StatusBar from 'components/statusbar'
 // define it with a plain javascript function...
 function CoreLayout ({ children }) {
   return (
-    <div className='page-container'>
-      <div className='view-container row'>
-        <TitleBar />
-        <div className='col-xs-6'>
-          <AppMenu />
-          <div>
-            {children}
-          </div>
+    <div className='flx-app-container'>
+      <TitleBar />
+      <div className='flx-1 flx-container flx-row'>
+        <AppMenu />
+        <div className='flx-1 flx-app-main'>
+          {children}
         </div>
-        <StatusBar />
       </div>
+      <StatusBar />
     </div>
   )
 }
