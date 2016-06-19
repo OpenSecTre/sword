@@ -14,6 +14,7 @@ export class StyleguideView extends Component {
             <h2>SWoRD Heading 2</h2>
             <h3>SWoRD Heading 3</h3>
             <h4>SWoRD Heading 4</h4>
+            <h5>SWoRD Heading 5</h5>
           </div>
         </div>
 
