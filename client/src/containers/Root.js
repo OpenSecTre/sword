@@ -13,9 +13,12 @@ const muiTheme = getMuiTheme(Object.assign({}, darkBaseTheme, {
     primary1Color: '#ad2f32',
     primary2Color: '#ad2f32',
     primary3Color: '#cfdbd5',
-    textColor: '#e8eddf'
+    textColor: '#e8eddf',
+    disabledColor: '#666666'
   }
 }));
+
+console.log(muiTheme);
 
 export default class Root extends React.Component {
   static propTypes = {
