@@ -1,24 +1,8 @@
 import React, { PropTypes } from 'react';
 import { Provider } from 'react-redux';
 import { Router } from 'react-router';
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-
-const muiTheme = getMuiTheme(Object.assign({}, darkBaseTheme, {
-  palette: {
-    accent1Color: '#242423',
-    accent2Color: '#242423',
-    accent3Color: '#242423',
-    primary1Color: '#ad2f32',
-    primary2Color: '#ad2f32',
-    primary3Color: '#cfdbd5',
-    textColor: '#e8eddf',
-    disabledColor: '#666666'
-  }
-}));
-
-console.log(muiTheme);
+import muiTheme from 'config/muiTheme';
 
 export default class Root extends React.Component {
   static propTypes = {
