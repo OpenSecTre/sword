@@ -1,0 +1,19 @@
+@import '02-tools/variables';
+
+$appbar-background-color: $color4;
+$appbar-text-color: $color3;
+$appbar-text-highlight-color: $color3;
+
+.appbar {
+  background-color: $appbar-background-color;
+  padding: 0 15px;
+}
+
+.title {
+  color: $appbar-text-color;
+  margin: .8em;
+}
+
+.highlight {
+  color: $appbar-text-highlight-color;
+}

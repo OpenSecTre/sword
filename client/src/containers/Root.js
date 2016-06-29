@@ -1,6 +1,8 @@
-import React, { PropTypes } from 'react'
-import { Provider } from 'react-redux'
-import { Router } from 'react-router'
+import React, { PropTypes } from 'react';
+import { Provider } from 'react-redux';
+import { Router } from 'react-router';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import muiTheme from 'config/muiTheme';
 
 export default class Root extends React.Component {
   static propTypes = {
@@ -14,20 +16,20 @@ export default class Root extends React.Component {
       <Router history={this.props.history}>
         {this.props.routes}
       </Router>
-    )
+    );
   }
 
   get devTools () {
     if (__DEBUG__) {
       if (__DEBUG_NEW_WINDOW__) {
         if (!window.devToolsExtension) {
-          require('../redux/utils/createDevToolsWindow').default(this.props.store)
+          require('../redux/utils/createDevToolsWindow').default(this.props.store);
         } else {
-          window.devToolsExtension.open()
+          window.devToolsExtension.open();
         }
       } else if (!window.devToolsExtension) {
-        const DevTools = require('containers/DevTools').default
-        return <DevTools />
+        const DevTools = require('containers/DevTools').default;
+        return <DevTools />;
       }
     }
   }
@@ -35,11 +37,13 @@ export default class Root extends React.Component {
   render () {
     return (
       <Provider store={this.props.store}>
-        <div style={{ height: '100%' }}>
-          {this.content}
-          {this.devTools}
-        </div>
+        <MuiThemeProvider muiTheme={muiTheme}>
+          <div style={{ height: '100%' }}>
+            {this.content}
+            {this.devTools}
+          </div>
+        </MuiThemeProvider>
       </Provider>
-    )
+    );
   }
 }

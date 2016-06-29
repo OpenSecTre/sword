@@ -1,5 +1,8 @@
-import React, { PropTypes } from 'react'
-import '../../styles/core.scss'
+import React, { PropTypes } from 'react';
+import '../../styles/core.scss';
+import TitleBar from 'components/titlebar';
+import AppMenu from 'components/appmenu';
+import StatusBar from 'components/statusbar';
 
 // Note: Stateless/function components *will not* hot reload!
 // react-transform *only* works on component classes.
@@ -12,16 +15,21 @@ import '../../styles/core.scss'
 // define it with a plain javascript function...
 function CoreLayout ({ children }) {
   return (
-    <div className='page-container'>
-      <div className='view-container'>
-        {children}
+    <div className='flx-app-container'>
+      <TitleBar />
+      <div className='flx-1 flx-container flx-row'>
+        <AppMenu />
+        <div className='flx-1 flx-app-main'>
+          {children}
+        </div>
       </div>
+      <StatusBar />
     </div>
-  )
+  );
 }
 
 CoreLayout.propTypes = {
   children: PropTypes.element
-}
+};
 
-export default CoreLayout
+export default CoreLayout;

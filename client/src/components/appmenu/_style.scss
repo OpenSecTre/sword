@@ -1,0 +1,9 @@
+@import '02-tools/variables';
+
+$menu-background-color: $color6;
+
+.menu {
+  background-color: $menu-background-color;
+  min-width: $menu-width;
+  max-width: $menu-width;
+}
