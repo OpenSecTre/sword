@@ -6,25 +6,18 @@ lib-cov
 *.out
 *.pid
 *.gz
-*.swp
 
 pids
 logs
 results
-tmp
-coverage
-
-# API keys
-.env
-
-# Dependency directory
-node_modules
+_dev
 bower_components
 
-# Editors
-.idea
-*.iml
+npm-debug.log
+node_modules
+server_old
+public
 
-# OS metadata
+# OS generated stuff
 .DS_Store
-Thumbs.db
+.DS_Store?
