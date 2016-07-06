@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import {connect} from 'react-redux';
-import * as scanActions from 'redux/actions/scan';
+import { connect } from 'react-redux';
+import { scanAction, changeIpAction, changePortAction } from 'redux/modules/scanner';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 
@@ -63,7 +63,11 @@ export class ScanView extends Component {
   }
 }
 
-const mapActionCreators = scanActions;
+const mapActionCreators = {
+  scanAction,
+  changeIpAction,
+  changePortAction
+};
 
 const mapStateToProps = (state) => ({
   ip: state.scan.ip,
