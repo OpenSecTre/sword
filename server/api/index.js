@@ -1,38 +1,26 @@
 import { Router } from 'express';
-import facets from './facets';
-import PythonShell from 'python-shell';
+import { scanHelp, scan } from './scanning';
 
 export default function() {
 	var api = Router();
 
-	// mount the facets resource
-	api.use('/facets', facets);
+	// Middleware for all routes
+	api.use((req, res, next) => {
+		console.log(`[Request] [${req.method}] ${req.originalUrl}`);
+		next();
+	});
 
-	// perhaps expose some API metadata at the root
+	// Expose some API metadata at the root
 	api.get('/', (req, res) => {
 		res.json({
+			name: 'SWoRD API',
 			version : '1.0'
 		});
 	});
 
-	api.get('/scan', (req, res) => {
-		var options = {
-		  mode: 'text',
-		  pythonOptions: ['-u'],
-		  scriptPath: '../backend/',
-		  args: ['-t', '127.0.0.1', '-p', '1024']
-		};
-
-		PythonShell.run('net_scan.py', options, function (err, results) {
-		  if (err) throw err;
-		  // results is an array consisting of messages collected during execution
-		  console.log('results: %j', results);
-
-			res.json({
-				result: results
-			});
-		});
-	});
+	// Scanning
+	api.route('/scan').get(scanHelp)
+	api.route('/scan/:ip/:port').get(scan);
 
 	return api;
 }
