@@ -25,10 +25,14 @@ function _scanSuccess (result, dispatch) {
 }
 
 function _scanError (error) {
+  if (error) {
+    console.log(error);
+  }
+
   return {
     type: SCAN_ERROR,
     payload: []
-  }
+  };
 }
 
 export function scanAction () {
