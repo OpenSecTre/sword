@@ -11,8 +11,8 @@ export const CHANGE_PORT = 'CHANGE_PORT';
 // ----------------------------------
 // Actions
 // ----------------------------------
-function _sendScan () {
-  return fetch('/api/scan');
+function _sendScan (ip, port) {
+  return fetch(`/api/scan/${ip}/${port}`);
 }
 
 function _scanSuccess (result, dispatch) {
@@ -26,17 +26,20 @@ function _scanSuccess (result, dispatch) {
 
 function _scanError (error) {
   return {
-    type: SCAN_ERROR
+    type: SCAN_ERROR,
+    payload: []
   }
 }
 
 export function scanAction () {
-  return function (dispatch) {
+  return function (dispatch, getState) {
     dispatch({
       type: SCAN_LOADING
     });
 
-    return _sendScan().then(
+    var { scan } = getState();
+
+    return _sendScan(encodeURIComponent(scan.ip), encodeURIComponent(scan.port)).then(
       (result) => _scanSuccess(result, dispatch),
       (error) => dispatch(_scanError(error))
     );
