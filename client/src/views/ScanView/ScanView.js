@@ -13,16 +13,30 @@ export class ScanView extends Component {
     result: PropTypes.array.isRequired,
     scanning: PropTypes.bool.isRequired,
     changeIpAction: PropTypes.func.isRequired,
-    changePortAction: PropTypes.func.isRequired
+    changePortAction: PropTypes.func.isRequired,
+    scanAction: PropTypes.func.isRequired
+  }
+
+  constructor () {
+    super();
+    this.changeIp = this.changeIp.bind(this);
+    this.changePort = this.changePort.bind(this);
   }
 
   get result () {
     if (this.props.scanning) {
       return 'scanning...';
-    }
-    else {
+    } else {
       return this.props.result;
     }
+  }
+
+  changeIp (event) {
+    this.props.changeIpAction(event.target.value);
+  }
+
+  changePort (event) {
+    this.props.changePortAction(event.target.value);
   }
 
   render () {
@@ -33,13 +47,13 @@ export class ScanView extends Component {
             hintText='192.168.1.0/24'
             floatingLabelText='IP-address'
             value={this.props.ip}
-            onChange={(e) => {this.props.changeIpAction(e.target.value)}}
+            onChange={this.changeIp}
           />
           <TextField
             hintText='1024-65535'
             floatingLabelText='Port (range)'
             value={this.props.port}
-            onChange={(e) => {this.props.changePortAction(e.target.value)}}
+            onChange={this.changePort}
           />
         </div>
         <div>
