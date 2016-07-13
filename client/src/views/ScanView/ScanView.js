@@ -42,27 +42,33 @@ export class ScanView extends Component {
   render () {
     return (
       <div>
-        <div>
-          <TextField
-            hintText='192.168.1.0/24'
-            floatingLabelText='IP-address'
-            value={this.props.ip}
-            onChange={this.changeIp}
-          />
-          <TextField
-            hintText='1024-65535'
-            floatingLabelText='Port (range)'
-            value={this.props.port}
-            onChange={this.changePort}
-          />
+        <div className='flx-block'>
+          <div className='flx-container'>
+            <div className='flx-1'>
+              <TextField
+                hintText='192.168.1.0/24'
+                floatingLabelText='IP-address'
+                value={this.props.ip}
+                onChange={this.changeIp}
+              />
+            </div>
+            <div className='flx-1'>
+              <TextField
+                hintText='1024-65535'
+                floatingLabelText='Port (range)'
+                value={this.props.port}
+                onChange={this.changePort}
+              />
+            </div>
+          </div>
+          <div>
+            <RaisedButton
+              label='Scan'
+              primary={primaryButton}
+              onClick={this.props.scanAction} />
+          </div>
         </div>
-        <div>
-          <RaisedButton
-            label='Scan'
-            primary={primaryButton}
-            onClick={this.props.scanAction} />
-        </div>
-        <div>
+        <div className='flx-block'>
           <h2>Result:</h2>
           <div>
             {this.result.map((line, index) => {
