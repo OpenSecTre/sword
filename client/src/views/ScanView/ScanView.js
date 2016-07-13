@@ -25,7 +25,7 @@ export class ScanView extends Component {
 
   get result () {
     if (this.props.scanning) {
-      return 'scanning...';
+      return ['scanning...'];
     } else {
       return this.props.result;
     }
