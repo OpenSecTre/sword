@@ -6,7 +6,7 @@ export class StyleguideView extends Component {
     return (
       <div>
         {/* HEADINGS */}
-        <div className={classes.block}>
+        <div className='flx-block'>
           <h1 className={classes.title}>Headings</h1>
 
           <div className={classes.example}>
@@ -19,7 +19,7 @@ export class StyleguideView extends Component {
         </div>
 
         {/* PARAGRAPHS */}
-        <div className={classes.block}>
+        <div className='flx-block'>
           <h1 className={classes.title}>Paragraphs</h1>
 
           <div className={classes.example}>
@@ -37,7 +37,7 @@ export class StyleguideView extends Component {
         </div>
 
         {/* Lists */}
-        <div className={classes.block}>
+        <div className='flx-block'>
           <h1 className={classes.title}>Lists</h1>
 
           <h2 className={classes.subtitle}>Unordered list</h2>
