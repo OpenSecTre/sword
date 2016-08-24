@@ -1,6 +1,10 @@
-# Compose is used to create the complete package locally to test and develop the application
 
-node:
-    build:
-        context: .
-        dockerfile: Dockerfile.node
+client:
+    build: "../client/"
+    ports:
+        - "80:80"
+
+server:
+    build: "../server/"
+    ports:
+        - ""
