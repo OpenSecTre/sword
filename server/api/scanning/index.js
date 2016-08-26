@@ -11,7 +11,7 @@ export function scan (req, res) {
 	var options = {
 	  mode: 'text',
 	  pythonOptions: ['-u'],
-	  scriptPath: '../backend/',
+	  scriptPath: './backend/',
 	  args: ['-t', req.params.ip, '-p', req.params.port]
 	};
 

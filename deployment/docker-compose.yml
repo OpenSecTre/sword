@@ -1,3 +1,4 @@
+# Compose file for deployments
 
 client:
     build: "../client/"
@@ -6,3 +7,5 @@ client:
 
 server:
     build: "../server/"
+    ports:
+        - "3000:3000"
