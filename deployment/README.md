@@ -1,6 +1,6 @@
 # Sword deployment
 
-Instructions on how to run Sword in containers.
+Instructions on how to run Sword in containers. It is recommended to run sword in a container. There are essentially two modes of running it. In `dev` which means that you just start the docker containers and volume-mount the content into it and the changes are reflect inside the container in real-time and in `production`/`deployment` when the containers are actually build and can be then started as individual containers with all the content "baked" inside.
 
 ## Development
 
